@@ -5,3 +5,5 @@ print("Python does not support constants (variables that stay the same throughou
 HELLO = "hi"
 
 print(HELLO)
+
+print("Type `import this` into your python interpreter to read The Zen of Python by Tim Peters.")
