@@ -69,4 +69,12 @@ print(f"{test} world")
 
 print(f"{test.rstrip()} world")
 
-# Now that's more like it!
+# Now that's more like it! Now let's use the lstrip() method, which does the same as above but before the left side. That is, it removes whitespace from before a string.
+
+print(f"Well {test} there.")
+print(f"Well {test.lstrip()} there.")
+
+
+# Wouldn't it be great if we could strip the whitespace from both sides of the string at once? Well that's exactly what the strip() method does.
+
+print(f"Well {test.strip()} there.")
