@@ -35,3 +35,38 @@ string = string.lower()
 
 print(f"""On to the .lower() method, which changes all letters in a string to lowercase.
         \t {string}\n""")
+
+# The f-strings I've been using were introduced in Python 3.6. Prior to 3.6 the .format() method was used.
+
+first_name = "Rosie"
+middle_name = "Peanut"
+last_name = "Butter"
+
+full_name = "{} {} {}".format(first_name, middle_name, last_name)
+
+print(full_name.upper())
+
+print(f"{full_name} is the best cat that ever lived.")
+
+
+# Fun fact, I learned about a new type of error with this last one. Forget quotation marks on your string and it will come back as undefined since python doesn't recognize Rosie as a string without them.
+
+# Now, let's look at some methods that will help us deal with whitespace.
+
+# First, rstrip(), which removes any white space from the right end of a string (after the string)
+
+test = " hello "
+
+print(test)
+
+print(test.rstrip())
+
+# Hmmm, they both look the same when printed to the console. Let's try to make it more clear.
+
+test = "     hello     "
+
+print(f"{test} world")
+
+print(f"{test.rstrip()} world")
+
+# Now that's more like it!
