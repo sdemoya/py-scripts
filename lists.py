@@ -86,4 +86,34 @@ rosie_toys.remove('turtle')
 
 print("rosie_toys = ", rosie_toys)
 
+# ORGANIZING LISTS
+
+print("\n\n\n In this section, we'll work on organizing lists using the sort() method, sorted() function, reverse() method and len() function.")
+print("\nLet's kick things off with sorted(), which will temporarily change a list's order to be alphabetical.")
+print("""sorted() is a little different in that it is a function, not a method.
+        Rather than applying it to a list object with the dot notation, we'll feed the list as an argument to the function, like so:
+        \t\t\tsorted(list_name)""")
+
+print("First we'll print our list `local_solar_sys`: ", local_solar_sys)
+
+print("\nNow we'll print it sorted: ", sorted(local_solar_sys))
+
+print("\nNow let's print the list our to see if the change was permenant: ", local_solar_sys)
+
+print("\nLet's try using the sort() and reverse() methods now.\n")
+
+print("First reverse(), which is permenant.\n")
+
+local_solar_sys.reverse()
+
+print(local_solar_sys)
+
+print("\nIf you want to sort in reverse alphabetical order, just pass the argument `reverse=True` to the sort() method.\n")
+
+local_solar_sys.sort(reverse=True)
+
+print(local_solar_sys)
+
+# Why does this return None instead of the same as the above? print(local_solar_sys.reverse())
+
 
