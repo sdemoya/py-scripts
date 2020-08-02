@@ -116,4 +116,8 @@ print(local_solar_sys)
 
 # Why does this return None instead of the same as the above? print(local_solar_sys.reverse())
 
+print("\nTo find the length of the list, simple use the len() function like so: ")
 
+print("\n\t\tlen(local_solar_sys) = ", len(local_solar_sys))
+
+print("Python counts item in a list starting at one, unlike it's index.")
