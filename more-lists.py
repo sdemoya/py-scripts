@@ -22,4 +22,12 @@ print(f"""We can also add a step parameter like so:
 print("""\nYou may have noticed that the list stops short of the stop parameter.
 So if I wanted the number 30 included, I would pass 31 as the stop parameter.""")
 
+print("Great, now let's do some simple maths.")
+
+print("min(counter) = ", min(counter))
+
+print("max(counter) = ", max(counter))
+
+print("sum(counter) = ", sum(counter))
+
 
