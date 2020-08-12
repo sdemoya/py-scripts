@@ -35,3 +35,16 @@ print("""You can also use a negative index when specifying a slice.
         Check out the below examples.""")
 
 print("rosie_attributes[-1:] = ", rosie_attributes[-1:])
+
+
+#Copying a list.
+
+print("Now let's copy a list by taking a slice of the entire list and assigning it to a variable.")
+
+rose = rosie_attributes
+
+print("""rose = rosie_attributes[:]
+        rose = """, rose)
+
+print("""This is different than rosie_attributes = rose, which would associate the two.
+        By taking a slice we are making a seperate, independent list.""")
