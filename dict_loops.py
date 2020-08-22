@@ -38,3 +38,25 @@ rivers = {
         'mackenzie': 'canada',
         'sao francisco': 'brazil',
         }
+
+print("\nOur dictionary includes the following rivers:")
+for river in rivers:
+    print(river.title())
+
+print("\nThese rivers run through:")
+for river in rivers.values():
+    print(river.title())
+
+print("\nNow let's list the rivers in alphabetical order:")
+for river in sorted(rivers):
+    print(river.title())
+
+print("\nAnd now let's list it all together:")
+for river, country in rivers.items():
+    print(f"{river.title()}, {country.title()}")
+
+print("\nAll together in alphabetical order:")
+for river, country in sorted(rivers.items()):
+    print(f"{river.title()}, {country.title()}")
+
+
