@@ -32,3 +32,17 @@ while needs_shots:
 for pet in vaccinated:
     print(f"{pet.title()} is fully vaccinated. Come back next year!")
 
+print("\nAnd now how we can remove all instances of a specific value from a list.\n")
+print("""As we already know, the remove() function only removes the first instance of
+        a value. If we use remove() inside of a while loop, however, we can remove all
+        instances of the specified value.""")
+
+mammels = ['bats', 'cetaceans', 'bears', 'rodents', 'aliens', 'monotremes', 'sloths', 'otters', 'aliens', 'seals']
+
+print(f"\nmammels = {mammels}")
+
+while 'aliens' in mammels:
+    mammels.remove('aliens')
+
+print(f"\nmammels (after while loop) = {mammels}")
+
