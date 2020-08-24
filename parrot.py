@@ -5,10 +5,17 @@ prompt += "\nEnter something here: "
 
 message = ""
 
-while message != 'quit':
-    message = input(prompt)
-    if message != quit:
-        print(f"\nGAWK, {message}")
+#while message != 'quit':
+ #   message = input(prompt)
+  #  if message != quit:
+   #     print(f"\nGAWK, {message}")
    #Need to figure out how to stop "Polly" from repeating 'quit' before exiting.'
 
+running = True
 
+while running:
+    message = input(prompt)
+    if message == 'quit':
+        running = False
+    else:
+        print(message)
