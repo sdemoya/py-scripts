@@ -12,14 +12,23 @@
 needs_shots = ['bear', 'fido', 'fluffy']
 vaccinated = ['rosie', 'zena']
 
-print(f"To Be Vaccinated: {needs_shots}")
-print(f"{vaccinated}'s vaccinations are up to date.")
+for pet in needs_shots:
+    print(f"{pet.title()} is in the waiting room.")
+
+for pet in vaccinated:
+    print(f"{pet.title()}'s vaccinations are up to date.")
+
 while needs_shots:
     get_shots = needs_shots.pop()
 
     print(f"{get_shots.title()} is being vaccinated.")
     vaccinated.append(get_shots)
+#I want to format this but I'm not sure how to do it.
+#if len(needs_shots) => 0
+#    print("All pets have been vaccinated. The waiting room is empty."
+#else:
+#    print(f"To Be Vaccinated: {needs_shots}")
 
-print(f"To Be Vaccinated: {needs_shots}")
-print(f"{vaccinated} have all their vaccines.")
+for pet in vaccinated:
+    print(f"{pet.title()} is fully vaccinated. Come back next year!")
 
