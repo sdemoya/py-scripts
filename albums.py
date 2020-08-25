@@ -5,6 +5,7 @@ def albums(artist, title, songs=None):
         return album
     else:
         album = {'Title': title, 'Artist': artist,}
+        return album
 
 OK_Computer = albums('Radiohead', 'OK Computer', 12)
 print(OK_Computer)
