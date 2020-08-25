@@ -6,4 +6,8 @@ def city_names(city, country):
 current_local = city_names('minsk', 'belarus')
 print(current_local)
 
+next_location = city_names('kyiv', 'ukraine')
+print(f"\n{next_location}")
 
+final_destination = city_names('gaborone', 'bostwana')
+print(f"\n{final_destination.upper()}")
