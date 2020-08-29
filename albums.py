@@ -15,6 +15,30 @@
 #Art_Angels = albums('Grimes', 'Art Angels')
 #print(Art_Angels)
 
+active = True
+
+def your_albums(artist, title, songs=None):
+   """Store information about albums in a dictionary."""
+    #if songs:
+        #album = {'Title': title, 'Artist': artist, 'Songs': songs,}
+        #return album
+    #else:
+      #  album = {'Title': title, 'Artist': artist,}
+    #return album
+
+    while active = True:
+        print("Please answer the questions below.
+        \n Enter Q anytime to quit.")
+        title = input("What is your album called? ")
+        if title == "Q":
+            break
+        artist = input("Which artist or group created your album? ")
+        if artist == "Q":
+            break
+        album = your_albums(title, artist)
+        print(f"So you playing {album}? Nice!")
+
+
 """
 active = True
 
