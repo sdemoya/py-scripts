@@ -7,10 +7,18 @@ def albums(artist, title, songs=None):
         album = {'Title': title, 'Artist': artist,}
         return album
 
-OK_Computer = albums('Radiohead', 'OK Computer', 12)
-print(OK_Computer)
+while True:
+    print("What's your favoirte album?")
+    print("Enter q at anytime to quit.")
 
-print("\n")
+    title = input("My favorite album is called ")
+    if title == 'q':
+        break
 
-Art_Angels = albums('Grimes', 'Art Angels')
-print(Art_Angels)
+    artist = input("Who is the album by? ")
+    if artist == 'q':
+        break
+
+    result = {'Title': title, 'Artist': artist,}
+    print(f"result = {result}")
+
