@@ -12,11 +12,11 @@ while True:
     print("Enter q at anytime to quit.")
 
     title = input("My favorite album is called ")
-    if title == 'q':
+    if title == 'q' or title == 'Q':
         break
 
     artist = input("Who is the album by? ")
-    if artist == 'q':
+    if artist == 'q' or artist == 'Q':
         break
 
     result = {'Title': title, 'Artist': artist,}
