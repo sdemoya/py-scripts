@@ -9,6 +9,16 @@ class Restaurant:
         """Describe the restaurant."""
         print(f"{self.name} serves {self.cuisine} cuisine.")
 
-restaurant = Restaurant('LA Vegan', 'vegan')
+la_vegan  = Restaurant('LA Vegan', 'Asian and American style')
 
-restaurant.describe_restaurant()
+la_vegan.describe_restaurant()
+
+settabello = Restaurant('Settabello', 'Italian')
+
+settabello.describe_restaurant()
+
+sage = Restaurant('Sage', 'vegan brunch')
+
+sage.describe_restaurant()
+
+
