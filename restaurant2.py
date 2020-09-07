@@ -15,6 +15,9 @@ class Restaurant:
         """Prints a sentence about patrons served."""
         print(f"Rosie Cakes has served {self.number_served} patrons today.")
 
+    def increment_served(self, patrons):
+        self.number_served += patrons
+
 la_vegan  = Restaurant('LA Vegan', 'Asian and American style')
 
 la_vegan.describe_restaurant()
@@ -36,5 +39,9 @@ my_restaurant.describe_restaurant()
 my_restaurant.served()
 
 my_restaurant.number_served = 57
+
+my_restaurant.served()
+
+my_restaurant.increment_served(50)
 
 my_restaurant.served()
