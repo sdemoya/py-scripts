@@ -8,6 +8,7 @@ class User:
         self.last_name = last_name
         self.email = email
         self.age = age
+        self.login_attempts = 0
 
     def greet_user(self):
         """Greet the user in the console."""
@@ -23,10 +24,9 @@ class User:
         Age: {self.age}
         """)
 
-feona = User('feona1234567', 'Sam', 'Green', 'sammy@email.com', 35)
-
-print(feona.greet_user())
-print(feona.describe_user())
+    def increment_logins(self):
+        self.login_attempts += 1
+        return self.login_attempts
 
 jim = User('prankster', 'Jim', 'Halpert', 'jim@theoffice', 30)
 
@@ -47,3 +47,10 @@ pam = User('newYorkArtist', 'Pam', 'Beesly', 'pam@theoffice', 32)
 
 print(pam.greet_user())
 print(pam.describe_user())
+
+#print(stanley.logins())
+
+print(stanley.increment_logins())
+
+print(stanley.increment_logins())
+
