@@ -12,7 +12,7 @@ class User:
 
     def greet_user(self):
         """Greet the user in the console."""
-        return(f"\nHello, {self.username}!")
+        return f"\nHello, {self.username}!"
 
     def describe_user(self):
         """Summarize user information."""
@@ -26,7 +26,7 @@ class User:
 
     def increment_logins(self):
         self.login_attempts += 1
-        return self.login_attempts
+        return f"{self.username} Attempted {self.login_attempts} Logins"
 
 jim = User('prankster', 'Jim', 'Halpert', 'jim@theoffice', 30)
 
