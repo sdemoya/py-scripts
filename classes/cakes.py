@@ -1,4 +1,4 @@
-#General Purpose Restaurant Class
+
 class Restaurant:
     """A simple attempt to model a restaurant."""
 
@@ -18,14 +18,43 @@ class Restaurant:
     def increment_served(self, patrons):
         self.number_served += patrons
 
-#Let's bake some cakes!
-class Bakery(Restaurant):
-    """Specalized class to represent bakeries."""
 
+la_vegan  = Restaurant('LA Vegan', 'Asian and American style')
+
+la_vegan.describe_restaurant()
+
+settabello = Restaurant('Settabello', 'Italian')
+
+settabello.describe_restaurant()
+
+sage = Restaurant('Sage', 'vegan brunch')
+
+sage.describe_restaurant()
+
+my_restaurant = Restaurant('Rosie Cakes', 'baked')
+
+my_restaurant.number_served = 42
+
+my_restaurant.describe_restaurant()
+
+my_restaurant.served()
+
+my_restaurant.number_served = 57
+
+my_restaurant.served()
+
+my_restaurant.increment_served(50)
+
+my_restaurant.served()
+
+print("\nBakery Time\n")
+
+class Bakery(Restaurant):
+    """Represents bakeries as a subclass of restaurant."""
     def __init__(self, name, cuisine):
-        """Initialize attributes of parent class."""
+        """Initialize attributes from the parent class."""
         super().__init__(name, cuisine)
 
-cakes = Bakery('Rosie Cakes', 'bakery')
+cakes = Bakery('Cat Cakery', 'baked')
 
-print(cakes.describe_restaurant())
+cakes.describe_restaurant()

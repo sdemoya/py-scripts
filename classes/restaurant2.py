@@ -17,6 +17,8 @@ class Restaurant:
 
     def increment_served(self, patrons):
         self.number_served += patrons
+        return patrons
+
 
 la_vegan  = Restaurant('LA Vegan', 'Asian and American style')
 
