@@ -22,11 +22,17 @@ class User:
         Last Name: {self.last_name}
         Email: {self.email}
         Age: {self.age}
+        Login Attempts: {self.login_attempts}
         """)
 
     def increment_logins(self):
         self.login_attempts += 1
         return f"{self.username} Attempted {self.login_attempts} Logins"
+
+    def reset_logins(self):
+        self.login_attempts = 0
+        return self.login_attempts
+
 
 jim = User('prankster', 'Jim', 'Halpert', 'jim@theoffice', 30)
 
@@ -48,9 +54,17 @@ pam = User('newYorkArtist', 'Pam', 'Beesly', 'pam@theoffice', 32)
 print(pam.greet_user())
 print(pam.describe_user())
 
-#print(stanley.logins())
+
+print(stanley.describe_user())
 
 print(stanley.increment_logins())
 
 print(stanley.increment_logins())
 
+print(stanley.increment_logins())
+
+print(stanley.describe_user())
+
+print(stanley.reset_logins())
+
+print(stanley.describe_user())
