@@ -54,7 +54,13 @@ class Bakery(Restaurant):
     def __init__(self, name, cuisine):
         """Initialize attributes from the parent class."""
         super().__init__(name, cuisine)
+        self.flavors = ['rose', 'lavender', 'peanut butter']
+
+    def list_flavors(self):
+        print(f"Today's flavors are: {self.flavors}")
 
 cakes = Bakery('Cat Cakery', 'baked')
 
 cakes.describe_restaurant()
+
+cakes.list_flavors()
