@@ -28,15 +28,12 @@ class User:
         return self.login_attempts
 
 
-# Admin Class
-class Admin(User):
-    def __init__(self, username, email):
-        """
-        Initialize attributes from parent class.
-        Initialize Admin specific attributes.
-        """
-        super().__init__(username, email)
-        self.permissions = ['can delete post', 'can ban user', 'can edit']
+#Permissions
+class Permissions:
+    """Dynamically models permissions a user or admin."""
+    def __init__(self, permissions=['access personal profile', 'post', 'read']):
+        """Initialize permissions attribute."""
+        self.permissions = permissions
 
     def show_permissions(self):
         print(self.permissions)
@@ -44,16 +41,24 @@ class Admin(User):
     def add_permissions(self, new_permissions):
         self.permissions.append(new_permissions)
         print(f"""
-                {self.username}'s permissions have been updated.
-                New permissions: {self.permissions}
-                """)
+        New Permissions:
+        \t{self.permissions}
+        """)
+
+
+# Admins
+class Admin(User):
+    def __init__(self, username, email):
+        """Initialize attributes from User & Permissions Classes"""
+        super().__init__(username, email)
+        self.permissions = Permissions()
 
 
 admin027 = Admin('admin027', 'admin027@gmail.com')
 
 print(admin027.describe_user())
 
-print(admin027.show_permissions())
+print(admin027.permissions.show_permissions())
 
-print(admin027.add_permissions('can create user'))
+print(admin027.permissions.add_permissions('can create user'))
 
