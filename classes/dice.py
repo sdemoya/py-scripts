@@ -3,9 +3,9 @@ import random
 class Dice:
     """Attempt to model rolling dice."""
 
-    def __init__(self, sides):
+    def __init__(self, sides=6):
         """Initialize attributes to describe a die."""
-        self.sides = 6
+        self.sides = sides
 
     def roll_die(self):
         """Roll the die to generate a random number."""
@@ -13,7 +13,7 @@ class Dice:
             print(random.randint(1, self.sides), end=' ')
 
 
-six = Dice(6)
+six = Dice()
 
 six.roll_die()
 
