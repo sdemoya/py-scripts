@@ -36,14 +36,24 @@ class Admin(User):
         Initialize Admin specific attributes.
         """
         super().__init__(username, email)
-    #    self.privileges = ['can delete post', 'can ban user', 'can edit']
+        self.permissions = ['can delete post', 'can ban user', 'can edit']
 
-   # def show_privileges(self):
-    #    print(self.privileges)
+    def show_permissions(self):
+        print(self.permissions)
+
+    def add_permissions(self, new_permissions):
+        self.permissions.append(new_permissions)
+        print(f"""
+                {self.username}'s permissions have been updated.
+                New permissions: {self.permissions}
+                """)
 
 
 admin027 = Admin('admin027', 'admin027@gmail.com')
 
 print(admin027.describe_user())
 
+print(admin027.show_permissions())
+
+print(admin027.add_permissions('can create user'))
 
