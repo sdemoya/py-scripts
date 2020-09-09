@@ -50,6 +50,13 @@ class Battery:
 
         print(f"This car can go about {range} miles on a full charge.")
 
+    def upgrade_battery(self):
+        if self.battery_size < 100:
+            self.battery_size = 100
+            print(f"Your battery has been upgraded to {self.battery_size}-kWh.")
+        elif self.battery_size >= 100:
+            print(f"Your battery is already {self.battery_size}-kWh. No upgrade available.")
+
 
 class ElectricCar(Car):
     """Represent aspects of a car, specific to electric vehicles."""
@@ -67,3 +74,18 @@ my_tesla = ElectricCar('tesla', 'model s', 2019)
 print(my_tesla.get_descriptive_name())
 my_tesla.battery.describe_battery()
 my_tesla.battery.get_range()
+
+print("\n")
+
+fiat500e = ElectricCar('Fiat', '500e', 2018)
+fiat500e.battery.get_range()
+fiat500e.battery.upgrade_battery()
+fiat500e.battery.get_range()
+
+print("\n")
+
+volt = ElectricCar('Chevy', 'Volt', 2019)
+volt.battery.get_range()
+volt.battery.upgrade_battery()
+volt.battery.get_range()
+volt.battery.upgrade_battery()
