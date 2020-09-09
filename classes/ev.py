@@ -3,6 +3,7 @@ This is a slightly  modified version of code published in
 Python Crash Course by Eric Matthes.
 It is intended for practice only and not an as a
 demonstration of original work.
+See comments for the bit I wrote.
 """)
 
 class Car:
@@ -50,7 +51,9 @@ class Battery:
 
         print(f"This car can go about {range} miles on a full charge.")
 
+# I wrote up_grade batter.
     def upgrade_battery(self):
+        """Checks battery size and upgrades if it's less than 100-kWh."""
         if self.battery_size < 100:
             self.battery_size = 100
             print(f"Your battery has been upgraded to {self.battery_size}-kWh.")
