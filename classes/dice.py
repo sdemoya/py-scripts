@@ -10,7 +10,7 @@ class Dice:
     def roll_die(self):
         """Roll the die to generate a random number."""
         for i in range(self.sides):
-            print('%4.3f' % random.random(), end=' ')
+            print('{:4.3f}'.format(random.uniform(1, self.sides)), end=' ')
         print()
 
 
