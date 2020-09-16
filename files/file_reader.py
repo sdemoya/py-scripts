@@ -10,5 +10,14 @@ filename = 'pi_digits.txt'
 
 with open(filename) as file_object:
     for line in file_object:
-        print(line)
+        print(line.strip())
 
+print("\nPut lines from a file into a list.\n")
+
+with open(filename) as file_object:
+    lines = file_object.readlines()
+
+for line in lines:
+    print(line.rstrip())
+
+print("\n\n")

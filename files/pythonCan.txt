@@ -1,0 +1,5 @@
+Python can loop through data.
+Python can manipulate data.
+Python can model real-world scenarios with classes and object.
+Python can reuse code as functions.
+Python can do math.
